@@ -1,0 +1,155 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+/*Uso de variáveis para as principais definições 
+do projeto*/
+:root {
+    --open-sans: 'Open Sans', sans-serif;
+    --yellow-color-1: #D6A430;
+    --yellow-color-2: #F7B53D;
+    --black: #000;
+    --white: #fff;
+}
+html, body {
+    height: 100vh;
+    font-family: var(--open-sans);
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+}
+html {
+    font-size: 62.5%;
+}
+
+header {
+    opacity: 1;
+    padding: 14px 21px 16px;
+}
+header .container-lg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+header .logo-box {
+    display: flex;
+    align-items: center;
+}
+
+/*Primeira imagem do header*/
+header .logo-box img:first-child {
+    width: 42px;
+    height: 30px;
+    margin-right: 40px;
+}
+/*Segunda imagem do header*/
+header .logo-box img:last-child {
+    width: 73px;
+    height: 20px;
+}
+/*Menu de hamburguer */
+.one, .two, .three {
+    background-color:var(--black);
+    height:2px;
+    width: 100%;
+    margin: 6px auto;
+    transition-duration: 0.3s;
+}
+.menu-toggle {
+    width: 35px;
+    height: 21px;
+}
+header nav ul {
+    display: flex;
+}
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: var(--yellow-font-1);
+    font-size: 2.1rem;
+}
+
+nav {
+    display: none;
+}
+
+section.hero .container-lg {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-end;
+}
+.hero {
+    height: calc(100vh - 60px);
+    background: url('../images/hero-image.png') no-repeat;
+    background-position:right;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+}
+.hero-content {
+    max-width: 529px;
+}
+ .hero-content h1{
+    /* font-size: 30px; */
+    font-size: 3.0rem;
+    color: var(--white);
+    text-shadow: 0px 3px 4px #00000026;
+    font-weight:bold;
+    opacity: 1;
+    margin-bottom: 1.0rem;
+}
+
+.hero-content .white-bar {
+    background-color: var(--white);
+    width: 16.2rem;
+    height: 0.2rem;
+    margin-bottom: 2.7rem;
+}
+.hero-price-box {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+.hero-price-box .price {
+    color: var(--white);
+    font-size: 1.7rem;
+    font-style: italic;
+    margin-right: 1.0rem;
+}
+.hero-price-box .real {
+    font-weight: bold;
+}
+.hero-price-box .real-value {
+    font-size: 3.3rem;
+    font-weight:900;
+}
+.hero-price-box .cents {
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+.hero-price-box a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight:400;
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 9px 21px;
+    background-color: var(--yellow-color-2);
+    box-shadow: 0px 3px 6px #0000008A;
+    border-radius: 19px;
+    opacity: 1;
+}
+.price-obs {
+    color: var(--white);
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 3.0rem;
+}
