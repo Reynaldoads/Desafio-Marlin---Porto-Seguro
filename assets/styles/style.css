@@ -10,6 +10,8 @@ do projeto*/
     --open-sans: 'Open Sans', sans-serif;
     --yellow-color-1: #D6A430;
     --yellow-color-2: #F7B53D;
+    --yellow-color-3: #9A6D0C;
+    --yellow-color-4: #EFC566;
     --black: #000;
     --white: #fff;
 }
@@ -29,11 +31,11 @@ header {
 }
 header .container-lg {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: space-between;
-    width: 90%;
+    width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin:auto;
 }
 header .logo-box {
     display: flex;
@@ -44,7 +46,7 @@ header .logo-box {
 header .logo-box img:first-child {
     width: 42px;
     height: 30px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 /*Segunda imagem do header*/
 header .logo-box img:last-child {
@@ -59,10 +61,118 @@ header .logo-box img:last-child {
     margin: 6px auto;
     transition-duration: 0.3s;
 }
+.menu-section.on .menu-toggle .one {
+    transform: rotate(41deg) translate(5px, 1px);
+}
+
+.menu-section.on .menu-toggle .two {
+    opacity: 0;
+}
+
+.menu-section.on .menu-toggle .three {
+    transform: rotate(-39deg) translate(8px, -10px)
+}
+
+ .hero .container-lg {
+    flex-direction: column;
+    text-align: center;
+}
 .menu-toggle {
     width: 35px;
     height: 21px;
+    /* margin-right: 40px; */
 }
+.menu-section.on {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: calc(100vh - 60px);
+    width: 100vw;
+    background-color: var(--yellow-color-3);
+    z-index: 20;
+    display: flex;
+    justify-content: flex-start;
+    transition: 0.5s;
+    /* padding: 20px; */
+}
+.menu-section.on .menu-toggle {
+    position: absolute;
+    right: 25px;
+    top: -45px;
+}
+.menu-section.on nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    color: var(--white);
+}
+.menu-section.on nav ul {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.menu-section.on nav ul li {
+    font-size: 2.1rem;
+    border-bottom: 2px solid var(--yellow-color-4);
+    padding: 7px 20px;
+    letter-spacing: 0.42rem;
+    font-weight: 600;
+}
+.menu-section.on .talk-to-us-box {
+    padding: 20px 0px  ;
+}
+.menu-section.on .talk-to-us-box {
+    display: block;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.menu-section.on .talk-to-us-box .contact-number {
+    text-align: center;
+    margin-bottom: 1.0rem;
+}
+.menu-section.on .talk-to-us-box .contact-number p:first-child {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+.menu-section.on .talk-to-us-box .contact-number p:last-child {
+    font-size: 2.5rem;
+    font-weight:900;
+}
+
+.menu-section.on .talk-to-us-box .whatsapp, .talk-to-us-box .call-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-transform: uppercase;
+    background-color: var(--yellow-color-2);
+    border-radius: 12px;
+    box-shadow: 0px 3px 6px #00000029;
+
+}
+.menu-section.on .talk-to-us-box .whatsapp i, .talk-to-us-box .call-us i {
+    margin-right: 1.0rem;
+    font-size: 2.6rem;
+}
+.menu-section.on .talk-to-us-box .whatsapp p, .talk-to-us-box .call-us p{
+    font-size: 1.5rem;
+}
+.menu-section.on .talk-to-us-box .whatsapp {
+    padding: 1.8rem 4.5rem;
+    margin-bottom: 1.0rem;
+}
+.menu-section.on .talk-to-us-box .call-us {
+    padding: 2.8rem 4.4rem;
+    margin-bottom: 1.0rem;
+}
+
 header nav ul {
     display: flex;
 }
@@ -84,7 +194,7 @@ section.hero .container-lg {
     width: 90%;
     max-width: 1200px;
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
 }
 .hero {
     height: calc(100vh - 60px);
@@ -93,15 +203,16 @@ section.hero .container-lg {
     background-size:cover;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 .hero-content {
-    max-width: 529px;
+    max-width: 337px;
 }
  .hero-content h1{
-    /* font-size: 30px; */
+    text-align: left;
     font-size: 3.0rem;
     color: var(--white);
-    text-shadow: 0px 3px 4px #00000026;
+    text-shadow: 0px 3px 4px #00000082;
     font-weight:bold;
     opacity: 1;
     margin-bottom: 1.0rem;
@@ -123,6 +234,7 @@ section.hero .container-lg {
     font-size: 1.7rem;
     font-style: italic;
     margin-right: 1.0rem;
+    
 }
 .hero-price-box .real {
     font-weight: bold;
@@ -152,4 +264,5 @@ section.hero .container-lg {
     font-size: 0.8rem;
     opacity: 0.5;
     margin-bottom: 3.0rem;
+    text-align: left;
 }
