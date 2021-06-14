@@ -13,8 +13,13 @@ do projeto*/
     --yellow-color-3: #9A6D0C;
     --yellow-color-4: #EFC566;
     --yellow-color-5: #E8BB15;
+    --yellow-color-6: #FFD984;
+    --yellow-color-7: #B47D07;
     --close-button: #C9C9C9;
     --black: #000;
+    --black-1: #171717;
+    --gray: #4b4b4b;
+    --gray-2: #BFBFBF;
     --white: #fff;
 }
 html, body {
@@ -31,9 +36,8 @@ header {
     opacity: 1;
     padding: 14px 21px 16px;
 }
-header .container-lg {
+header .container-lg, main .container-lg {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
@@ -74,7 +78,9 @@ header .logo-box img:last-child {
 .menu-section.on .menu-toggle .three {
     transform: rotate(-39deg) translate(8px, -10px)
 }
-
+.hero {
+    margin-bottom: 4.0em;
+}
  .hero .container-lg {
     flex-direction: column;
     text-align: center;
@@ -241,9 +247,9 @@ section.hero .container-lg {
 .hero-price-box .real {
     font-weight: bold;
 }
-.hero-price-box .real-value {
+.hero-price-box span .real-value {
     font-size: 3.3rem;
-    font-weight:900;
+    font-weight:bold;
 }
 .hero-price-box .cents {
     font-size: 1.8rem;
@@ -287,11 +293,11 @@ section.hero .container-lg {
     background-color: var(--white);
     border-radius: 12px;
     max-width: 309px;
-    padding: 1.9em 1.0em 1.0em 1.0em;
+    padding: 1.9rem 1.0rem 1.0rem 1.0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 30.9em;
+    min-width: 30.9rem;
 }
 @keyframes modal {
     from {
@@ -306,11 +312,11 @@ section.hero .container-lg {
 }
 .modal .modal-button {
     position: absolute;
-    top: -0.5em;
-    right: -1.3em;
+    top: -0.5rem;
+    right: -1.3rem;
     border: none;
     color: var(--close-button);
-    font-size: 2.0em;
+    font-size: 2.0rem;
     font-weight: lighter;
     background-color: transparent;
 }
@@ -319,13 +325,13 @@ section.hero .container-lg {
 }
 
 .modal h1 {
-    margin-bottom: 0.5em;
-    font-size: 1.9em;
+    margin-bottom: 0.5rem;
+    font-size: 1.9rem;
     color: var(--yellow-color-5);
     font-weight: 900;
 }
 .modal-text-box {
-    min-width: 21.9em;
+    min-width: 21.9rem;
     display: flex;
     justify-content:flex-start;
     flex-direction: column;
@@ -333,18 +339,18 @@ section.hero .container-lg {
     position: relative
 }
 .modal h3 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
 }
 
 .modal ul {
     list-style: none;
 }
 .modal ul li {
-    font-size: 1.2em;
-    margin: 0.3em 0em;
+    font-size: 1.2rem;
+    margin: 0.3rem 0rem;
 }
 .modal-text-box h3:nth-last-child(2) {
-    margin-top: 2.0em;
+    margin-top: 2.0rem;
 }
 .modal ul li::before {
     content: "-";
@@ -357,14 +363,218 @@ section.hero .container-lg {
     text-transform: uppercase;
     background-color: var(--yellow-color-3);
     color: var(--white);
-    padding: 0.7em 1.9em;
+    padding: 0.7rem 1.9rem;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 15px;
     opacity: 1;
     font-weight: bold;
-    margin-top:2.0em ;
+    margin-top:2.0rem ;
     width: 100%;
 }
 .hospital-list-download i {
     margin-right: 3px;
+}
+
+/*-=-=-=-=-= SESSÃO PLANO OURO -=-=-=-=-=*/
+
+main .container-lg {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    margin:auto;
+}
+
+.section-title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--black-1);
+}
+ .title-bar {
+    max-width: 16.2rem;
+    height: 0.2rem;
+    background-color:  var(--yellow-color-2);
+    margin-top: 1.5rem;
+    margin-bottom: 1.8rem;
+}
+.default-section-p  {
+    font-size: 1.5rem;
+    text-align: left;
+    color: var(--gray);
+    margin-bottom:1.5rem ;
+}
+.collapse-container {
+    background-color: var(--yellow-color-1);
+    border-radius: 12px;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 2.3rem 2.7rem 3.1rem 2.7rem;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.golden-plan-box h6 {
+    font-size: 1.5rem;
+    color: var(--yellow-color-6);
+    font-weight: 400;
+    margin-bottom: 0.6rem;
+}
+.golden-plan-box p {
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: normal;
+    margin-bottom: 0px;
+}
+.golden-plan-box .real {
+    font-size: 2.1em;
+    font-weight: 900;
+}
+.golden-plan-box .real-value {
+    font-size: 4.0rem;
+    font-weight: 900;
+}
+.golden-plan-box .cents {
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+.description-plan-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 135px;
+    margin-left: 0.5rem;
+}
+.description-plan-box p {
+    font-size: 0.7rem;
+    color: var(--white);
+}
+.description-plan-box img {
+    max-width: 8.9rem;
+}
+.collapse-btn-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    margin-top: 2.2rem;
+}
+
+.collapse-btn-box button, .collapse-btn-box .btn-box {
+    border: none;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 15px;
+    width: 100%;
+    font-size:1.2rem ;
+    text-transform: uppercase;
+    padding: 0.7rem;
+    font-weight:600;
+}
+.collapse-btn-box button {
+    background-color: var(--yellow-color-2);
+    color: var(--white);
+    font-size:1.2rem ;
+    margin-bottom: 1.9rem;
+    letter-spacing: 0.12rem;
+}
+.collapse-btn-box .btn-box {
+    background-color: var(--yellow-color-3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2rem ;
+}
+.btn-box i {
+    margin-right: 0.5rem;
+}
+.collapse-container {
+    margin-bottom: 2.2rem;
+}
+.collapse-container ul li {
+    list-style: none;
+    border-bottom: 1px solid var(--yellow-color-7);
+    padding: 1.0rem;
+    font-size: 1.5rem;
+}
+.collapse-container ul li p {
+    font-size: 1.0rem;
+    color: var(--white);
+    margin-bottom: 0;
+}
+.collapsed-container {
+display: none;
+flex-direction: column;
+align-items: center;
+transition: 0.4s;
+
+}
+.collapsed-container ul {
+    margin-bottom: 1.25rem;
+}
+.displayOff {
+    display: none;
+}
+.accomodation, .coverage {
+    display: flex;
+    align-items: center;
+}
+.accomodation svg, .coverage svg {
+    margin-right: 2.5rem;
+}
+.accomodation p , .coverage p {
+    font-style: normal;
+    color: var(--white);
+} 
+.accomodation p strong, .coverage p strong {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 900;
+}
+@keyframes accordion {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    
+    to {    
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.accordion {
+    animation: accordion 0.4s;
+}
+section .hospitals {
+    display: flex;
+    /* justify-content: center; */
+}
+.hospitals-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.hospital-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    margin-bottom: 2.3rem;
+    margin-right: 1.2rem;
+}
+.hospital-card img{
+    max-width: 100%;
+}
+.hospital-card-title {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-top: 9px;
+    color: var(--yellow-color-5);
+}
+.hospital-card i {
+    color: var(--gray-2);
+    font-size: 2.0rem;
+    margin-bottom: 1.2rem;
 }

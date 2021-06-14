@@ -25,4 +25,17 @@ function openModal() {
     modalContainer.style.display = "flex";
     modal.classList.add('modalAnimation')
 }
-
+let btnToggle = document.querySelector('.collapse-btn');
+let collapsedContainer = document.querySelector('.collapsed-container');
+let aux = false;
+btnToggle.addEventListener('click', function() {
+if(aux) {
+    collapsedContainer.style.display = 'none'
+    btnToggle.innerHTML = "Veja a cobertura completa"
+} else {
+    collapsedContainer.style.display = 'flex';
+    btnToggle.innerHTML = "Fechar"
+    collapsedContainer.classList.add('accordion')
+}
+    aux = !aux;
+});
