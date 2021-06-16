@@ -20,6 +20,9 @@ do projeto*/
     --black-1: #171717;
     --gray: #4b4b4b;
     --gray-2: #BFBFBF;
+    --gray-3: #C5CCD9;
+    --gray-4: #404040;
+    --gray-5: #1A1A1A;
     --white: #fff;
 }
 html, body {
@@ -548,12 +551,11 @@ transition: 0.4s;
 }
 section .hospitals {
     display: flex;
-    /* justify-content: center; */
 }
 .hospitals-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 .hospital-card {
     display: flex;
@@ -562,19 +564,109 @@ section .hospitals {
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 12px;
     margin-bottom: 2.3rem;
-    margin-right: 1.2rem;
+    max-width: 34.0rem;
 }
 .hospital-card img{
     max-width: 100%;
 }
-.hospital-card-title {
+.card-title {
     font-weight: 900;
     font-size: 1.5rem;
-    margin-top: 9px;
+    margin-top: 0.9rem;
     color: var(--yellow-color-5);
+    max-width: 19.0rem;
+    text-align: center;
 }
-.hospital-card i {
+.hospital-card i{
     color: var(--gray-2);
     font-size: 2.0rem;
     margin-bottom: 1.2rem;
+}
+.card-accordion {
+    padding: 0rem 2.5rem;
+    display: none;
+}
+.card-accordion p{
+    font-size: 1.2rem;
+    color: var(--gray);
+    margin-bottom: 1.9rem;
+}
+.hospital-address, .hospital-telephone {
+    display: flex;
+}
+.hospital-address i, .hospital-telephone i {
+    color: var(--yellow-color-2);
+    margin-right: 0.8rem;
+}
+.hospital-address p, .hospital-address p{
+    font-size: 1.2rem;
+    font-style: normal;
+}
+.hospital-address {
+    border-top: 1px solid var(--gray-3);
+    padding-top: 1.9rem;
+    padding-bottom: 0.9rem;
+}
+.hospital-address address {
+    font-style: normal;
+    color: var(--gray);
+    font-size: 1.2rem;
+}
+.hospital-telephone  {
+    padding-bottom: 2.0rem;
+}
+.btnAccordion {
+    transform: rotate(180deg);
+    transition: 0.4s;
+}
+.btnAccordionOff {
+    transform: rotate(-180);
+    transition: 0.4s;
+}
+.benefits-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* padding:  0rem 3.0rem; */
+}
+.benefits-card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    margin-bottom: 2.3rem;
+    min-width: 34.0rem;
+    flex: 1;
+}
+.card-content {
+    padding: 0rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.benefits-card img {
+    max-width: 100%;
+}
+.benefits-card .card-p {
+    font-size: 1.2rem;
+    color: var(--gray-4);
+    margin-top: 0.8rem;
+}
+.benefits-card button {
+    background-color: var(--yellow-color-3);
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 16px;
+    padding: 0.9rem 3.5rem;
+    letter-spacing: 0.09rem;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--white);
+    margin: 3.0rem 0rem 3.3rem 0rem;
+}
+.benefits-cards p:nth-child(3) {
+    color: var(--gray-5);
+    padding: 0rem 2.5rem 3.0rem;
 }

@@ -39,3 +39,18 @@ if(aux) {
 }
     aux = !aux;
 });
+
+let btnAccordion = document.querySelector('#arrowAccordion')
+let hospitalAccordion = document.querySelector('.card-accordion')
+let auxiliar = false;
+btnAccordion.addEventListener('click', function() {
+    if(auxiliar) {
+        hospitalAccordion.style.display = 'none'
+        btnAccordion.classList.remove('btnAccordion')
+        btnAccordion.classList.add('btnAccordionOff')
+    } else {
+        hospitalAccordion.style.display = 'block'
+        btnAccordion.classList.add('btnAccordion')
+    }
+    auxiliar = !auxiliar;
+});
