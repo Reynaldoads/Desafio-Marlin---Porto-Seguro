@@ -54,3 +54,7 @@ btnAccordion.addEventListener('click', function() {
     }
     auxiliar = !auxiliar;
 });
+
+var onloadCallback = function() {
+    alert("grecaptcha is ready!");
+  };
