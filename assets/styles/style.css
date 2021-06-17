@@ -15,6 +15,7 @@ do projeto*/
     --yellow-color-5: #E8BB15;
     --yellow-color-6: #FFD984;
     --yellow-color-7: #B47D07;
+    --yellow-color-8: #D7A636;
     --close-button: #C9C9C9;
     --black: #000;
     --black-1: #171717;
@@ -555,9 +556,9 @@ section .hospitals {
 .hospitals-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
 }
-.hospital-card {
+.hospital-card, .health-card, .benefits-card {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -566,7 +567,7 @@ section .hospitals {
     margin-bottom: 2.3rem;
     max-width: 34.0rem;
 }
-.hospital-card img{
+.hospital-card img, .health-card img{
     max-width: 100%;
 }
 .card-title {
@@ -627,23 +628,17 @@ section .hospitals {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* padding:  0rem 3.0rem; */
 }
 .benefits-card {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 12px;
     margin-bottom: 2.3rem;
-    min-width: 34.0rem;
-    flex: 1;
 }
+
 .card-content {
     padding: 0rem 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .benefits-card img {
     max-width: 100%;
@@ -669,4 +664,70 @@ section .hospitals {
 .benefits-cards p:nth-child(3) {
     color: var(--gray-5);
     padding: 0rem 2.5rem 3.0rem;
+}
+.health-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.health-card-title {
+    font-size: 2.0rem;
+    font-weight: 900;
+    color: var(--yellow-color-5);
+    margin-top: 2.7rem;
+    margin-bottom: 1.8rem;
+    text-transform: uppercase;
+}
+.health-card p {
+    font-size: 1.5rem;
+    color: var(--gray-5);
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+.card-bar {
+    height: 2px;
+    width: 16.2rem;
+    margin-bottom: 25px;
+    background-color: var(--yellow-color-4);
+}
+
+.card-content ul {
+    list-style: none;
+    margin-bottom: 4.3rem;
+}
+.card-content ul li {
+    font-size: 1.4rem;
+    margin-bottom: 1.8rem;
+    display: flex;
+}
+.card-content ul li p {
+    max-width: 23.5rem;
+    text-align: left;
+}
+.card-content ul li p:last-child,
+ .card-content ul li:last-child {
+    margin-bottom: 0rem;
+}
+
+.card-content ul li::before {
+    content: "✔";
+    color: var(--yellow-color-8);
+    margin-right: 0.5rem;
+}
+.health-card .card-p-content {
+    display: flex;
+    align-items: baseline;
+}
+.health-card .check {
+    color: var(--yellow-color-8);
+    margin-right: 0.5rem;
+    display: inline-flex;
+    font-size: 1.4rem;
+}
+.health-card .card-p {
+    font-size: 1.4rem;
+    color: var(--gray-5);
+    text-align: left;
+    max-width: 22.5rem;
+    line-height: 2.0em;
 }
