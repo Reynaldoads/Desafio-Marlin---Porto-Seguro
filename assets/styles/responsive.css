@@ -14,6 +14,17 @@
         margin-right: 24px;
         font-weight:600;
     }
+    .hospital-card {
+        flex: 1;
+        max-width: 100%;
+        /* margin:0 1.0rem; */
+    }
+    .hospital-card:first-child {
+        margin-right: 1.0rem;
+    }
+    .hospital-card:nth-child(3) {
+        margin-left: 1.0rem;
+    }
 }
 @media (min-width: 992px) {
     html {
@@ -53,5 +64,6 @@
     .modal-container {
         height: 100vh;
     }
+   
    
 }

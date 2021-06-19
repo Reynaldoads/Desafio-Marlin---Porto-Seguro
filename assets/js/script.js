@@ -1,3 +1,21 @@
+/*-=-=-=-= BLOCO DE FUNÇÃO PARA HEADER FIXO  -=-=-=-= */
+window.onscroll = function() {
+    myFunction()
+};
+var header = document.getElementById("header")
+var sticky = header.offsetTop;
+function myFunction() {
+   
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        
+    }
+  
+/*XXXXXXXX--------FIM DO BLOCO DE FUNÇÃO PARA HEADER FIXO --------XXXXXXXX*/
+
 /*-=-=-=-= BLOCO DE FUNÇÃO PARA MENU  -=-=-=-= */
 let show = true; 
 const menuSection = document.querySelector(".menu-section")

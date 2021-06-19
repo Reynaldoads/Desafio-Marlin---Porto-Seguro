@@ -41,7 +41,16 @@ html {
 header {
     padding: 1.4rem 2.1rem 1.6rem;
     box-shadow: 0px 5px 6px #00000086;
+    background-color: var(--white);
 }
+.sticky {
+    position: fixed;
+    /* top: 0; */
+    width: 100%
+  }
+  .sticky + main {
+    padding-top: 102px;
+  }
 header .container-lg {
     display: flex;
     justify-content: space-between;
@@ -98,7 +107,9 @@ header .logo-box img:last-child {
 }
 .menu-section.on {
     position: absolute;
-    bottom: 0;
+    /* bottom: 0; */
+    top: 60px;
+    left: 0;
     right: 0;
     height: calc(100vh - 60px);
     width: 100vw;
@@ -493,7 +504,7 @@ main .container-lg {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
 }
 .golden-plan-box h6 {
     font-size: 1.5rem;
@@ -526,12 +537,14 @@ main .container-lg {
     align-items: center;
     max-width: 135px;
     margin-left: 0.5rem;
+    margin-right: 2.5rem;
 }
 .description-plan-box p {
     font-size: 0.7rem;
     color: var(--white);
 }
 .description-plan-box img {
+    margin-top: 1.5rem;
     max-width: 8.9rem;
 }
 .collapse-btn-box {
@@ -642,7 +655,7 @@ section .hospitals {
 }
 .hospitals-cards {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
     justify-content:space-between;
 }
 .hospital-card, .health-card, .benefits-card {
@@ -656,7 +669,8 @@ section .hospitals {
 }
 .hospital-card {
     /* flex: 1; */
-    max-width: 100%;
+    /* max-width: 100%; */
+    /* margin:0 1.0rem; */
 }
 .hospital-card img, .health-card img{
     max-width: 100%;
@@ -666,7 +680,7 @@ section .hospitals {
     font-size: 1.5rem;
     margin-top: 0.9rem;
     color: var(--yellow-color-5);
-    max-width: 19.0rem;
+    /* max-width: 19.0rem; */
     text-align: center;
 }
 .hospital-card i{
