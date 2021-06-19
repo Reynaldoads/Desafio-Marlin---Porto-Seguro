@@ -25,6 +25,7 @@ do projeto*/
     --gray-4: #404040;
     --gray-5: #1A1A1A;
     --gray-6: #A7A7A7;
+    --gray-7: #8a8a8a;
     --white: #fff;
 }
 html, body {
@@ -38,14 +39,13 @@ html {
 }
 
 header {
-    opacity: 1;
-    padding: 14px 21px 16px;
+    padding: 1.4rem 2.1rem 1.6rem;
+    box-shadow: 0px 5px 6px #00000086;
 }
-header .container-lg, main .container-lg {
+header .container-lg {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
+    align-items: center;
     margin:auto;
 }
 header .logo-box {
@@ -55,14 +55,14 @@ header .logo-box {
 
 /*Primeira imagem do header*/
 header .logo-box img:first-child {
-    width: 42px;
-    height: 30px;
-    margin-right: 20px;
+    width: 4.2rem;
+    height: 3.0rem;
+    margin-right: 2.0rem;
 }
 /*Segunda imagem do header*/
 header .logo-box img:last-child {
-    width: 73px;
-    height: 20px;
+    width: 7.3rem;
+    height: 2.0rem;
 }
 /*Menu de hamburguer */
 .one, .two, .three {
@@ -85,6 +85,8 @@ header .logo-box img:last-child {
 }
 .hero {
     margin-bottom: 4.0em;
+    display: flex;
+    /* flex-direction: column; */
 }
  .hero .container-lg {
     flex-direction: column;
@@ -93,7 +95,6 @@ header .logo-box img:last-child {
 .menu-toggle {
     width: 35px;
     height: 21px;
-    /* margin-right: 40px; */
 }
 .menu-section.on {
     position: absolute;
@@ -105,13 +106,13 @@ header .logo-box img:last-child {
     z-index: 20;
     display: flex;
     justify-content: flex-start;
-    transition: 0.5s;
-    /* padding: 20px; */
+    transition: 0.4s;
 }
 .menu-section.on .menu-toggle {
     position: absolute;
     right: 25px;
-    top: -45px;
+    top: -42px;
+    margin-right: 2.1rem;
 }
 .menu-section.on nav {
     display: flex;
@@ -152,7 +153,7 @@ header .logo-box img:last-child {
 .menu-section.on .talk-to-us-box .contact-number p:first-child {
     font-size: 1.5rem;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
 }
 .menu-section.on .talk-to-us-box .contact-number p:last-child {
     font-size: 2.5rem;
@@ -205,13 +206,11 @@ nav {
 
 section.hero .container-lg {
     width: 90%;
-    max-width: 1200px;
     display: flex;
     align-items: flex-start;
 }
 .hero {
-    height: calc(100vh - 60px);
-    background: url('../images/hero-image.png') no-repeat;
+    background: url('../images/hero-image.png');
     background-position:right;
     background-size:cover;
     display: flex;
@@ -219,7 +218,15 @@ section.hero .container-lg {
     align-items: flex-end;
 }
 .hero-content {
+    margin-top: 254px;
     max-width: 337px;
+}
+.golden-plan-p {
+    text-align: left;
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    display: none;
 }
  .hero-content h1{
     text-align: left;
@@ -227,10 +234,9 @@ section.hero .container-lg {
     color: var(--white);
     text-shadow: 0px 3px 4px #00000082;
     font-weight:bold;
-    opacity: 1;
     margin-bottom: 1.0rem;
+    
 }
-
 .hero-content .white-bar {
     background-color: var(--white);
     width: 16.2rem;
@@ -241,36 +247,98 @@ section.hero .container-lg {
     margin-bottom: 1.2rem;
     display: flex;
     align-items: center;
-}
-.hero-price-box .price {
     color: var(--white);
+}
+.price {
+    display: flex;
+    align-items: center;
+    margin-right: 1.0rem;
+}
+.hero-price-box .price .from{
     font-size: 1.7rem;
     font-style: italic;
     margin-right: 1.0rem;
-    
 }
 .hero-price-box .real {
-    font-weight: bold;
+    font-size: 1.7rem;
+    font-weight: 700;
 }
-.hero-price-box span .real-value {
+.hero-price-box .price {
+    display: flex;
+}
+.price .real-value {
     font-size: 3.3rem;
-    font-weight:bold;
+    font-weight: 700;
 }
 .hero-price-box .cents {
     font-size: 1.8rem;
     font-weight: 900;
 }
-.hero-price-box button {
+.hero-price-box .modalLink {
     font-size: 1.3rem;
     border: none;
     font-weight:400;
-    color: var(--white);
     text-transform: uppercase;
-    padding: 9px 21px;
+    padding: 0.9rem 2.1rem;
     background-color: var(--yellow-color-2);
+    color: var(--white);
     box-shadow: 0px 3px 6px #0000008A;
-    border-radius: 19px;
+    border-radius: 1.9rem;
+}
+.goldenPlanContainer {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgba(0, 0, 0, 0.397); */
+    bottom: 0;
+    left: 0; 
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.goldenPlanContainer.show {
     opacity: 1;
+    pointer-events: auto;
+}
+.goldenPlanModal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    padding: 15px 44px 15px 20px;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius:70px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    bottom: 25px;
+}
+.goldenPlanModal.fade {
+    opacity: 1;
+}
+.goldenPlanModal button {
+    color: var(--gray-7);
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    margin-right: 12px;
+}
+.goldenPlanModal img {
+    width: 48px;
+    height: 48px;
+    margin-right: 16px;
+}
+.goldenPlanModal p, .goldenPlanModal a {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+.goldenPlanModal strong {
+    color: var(--yellow-color-2);
 }
 .price-obs {
     color: var(--white);
@@ -278,7 +346,10 @@ section.hero .container-lg {
     opacity: 0.5;
     margin-bottom: 3.0rem;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
 }
+
 /************CONTAINER DO MODAL*************/
 .modal-container {
     position: fixed;
@@ -288,9 +359,16 @@ section.hero .container-lg {
     left: 0; 
     background-color: rgba(0, 0, 0, 0.602);
     z-index: 2000;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .modal {
@@ -298,7 +376,6 @@ section.hero .container-lg {
     background-color: var(--white);
     border-radius: 12px;
     max-width: 309px;
-    padding: 1.9rem 1.0rem 1.0rem 1.0rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -317,31 +394,30 @@ section.hero .container-lg {
 }
 .modal .modal-button {
     position: absolute;
-    top: -0.5rem;
+    top: -2.5rem;
     right: -1.3rem;
     border: none;
     color: var(--close-button);
-    font-size: 2.0rem;
-    font-weight: lighter;
+    font-size: 3.0rem;
     background-color: transparent;
 }
 .modalAnimation {
     animation: modal .3s;
 }
 
-.modal h1 {
+.modal-text-box h1 {
     margin-bottom: 0.5rem;
     font-size: 1.9rem;
     color: var(--yellow-color-5);
-    font-weight: 900;
+    font-weight: 700;
 }
 .modal-text-box {
-    min-width: 21.9rem;
     display: flex;
     justify-content:flex-start;
+    margin: 3.2rem 4.0rem 0rem 4.0rem;
     flex-direction: column;
-    text-align:start;
-    position: relative
+    text-align:left;
+    position: relative;
 }
 .modal h3 {
     font-size: 1.2rem;
@@ -371,10 +447,9 @@ section.hero .container-lg {
     padding: 0.7rem 1.9rem;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 15px;
-    opacity: 1;
     font-weight: bold;
-    margin-top:2.0rem ;
-    width: 100%;
+    margin: 3.0rem 1.0rem 1.4rem 1.0rem;
+    width: 90%;
 }
 .hospital-list-download i {
     margin-right: 3px;
@@ -383,11 +458,11 @@ section.hero .container-lg {
 /*-=-=-=-=-= SESSÃO PLANO OURO -=-=-=-=-=*/
 
 main .container-lg {
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
     flex-direction: column;
     width: 90%;
-    max-width: 1200px;
+    /* max-width: 1160px; */
     margin:auto;
 }
 
@@ -423,7 +498,7 @@ main .container-lg {
 .golden-plan-box h6 {
     font-size: 1.5rem;
     color: var(--yellow-color-6);
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 0.6rem;
 }
 .golden-plan-box p {
@@ -509,11 +584,9 @@ main .container-lg {
     margin-bottom: 0;
 }
 .collapsed-container {
-display: none;
-flex-direction: column;
-align-items: center;
-transition: 0.4s;
-
+    display: none;
+    flex-direction: column;
+    align-items: center;
 }
 .collapsed-container ul {
     margin-bottom: 1.25rem;
@@ -551,6 +624,19 @@ transition: 0.4s;
 .accordion {
     animation: accordion 0.4s;
 }
+.accordionOff {
+    animation: accordionOff 0.4s;
+}
+@keyframes accordionOff {
+    from {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+}
 section .hospitals {
     display: flex;
 }
@@ -567,6 +653,10 @@ section .hospitals {
     border-radius: 12px;
     margin-bottom: 2.3rem;
     max-width: 34.0rem;
+}
+.hospital-card {
+    /* flex: 1; */
+    max-width: 100%;
 }
 .hospital-card img, .health-card img{
     max-width: 100%;
@@ -657,7 +747,7 @@ section .hospitals {
     letter-spacing: 0.09rem;
     border: none;
     text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 0.9rem;
     color: var(--white);
     margin: 3.0rem 0rem 3.3rem 0rem;
@@ -785,7 +875,7 @@ form img {
 }
 form input[type=submit] {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3px;
     color: var(--white);
@@ -832,7 +922,7 @@ form input[type=submit] {
 }
 .wpp-box a, .call-box a {
     font-size: 1.5rem;
-    font-weight: 400;
+    font-weight: 600;
     color: var(--white);
     text-transform: uppercase;
 }

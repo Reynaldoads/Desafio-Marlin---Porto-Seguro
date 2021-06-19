@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap" 
     rel="stylesheet">
+
+    <!--Link para o Font Awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <title>Porto Seguro - Home</title>
 </head>
@@ -25,7 +27,7 @@
                 <img src="./assets/images/logo-Norte-a-Sul.png" alt="">
                 <img src="./assets/images/porto_seguro.png" alt="">
             </div>
-            <div class="menu-section ">
+            <div class="menu-section">
                 <div class="menu-toggle">
                     <div class="one"></div>
                     <div class="two"></div>
@@ -76,23 +78,34 @@
                     padrão de atendimento a seus funcionários.
                 </h1>
                 <div class="white-bar"></div>
+                <p class="golden-plan-p">Conheça o plano Ouro da  Porto Seguro Saúde.</p>
                 <div class="hero-price-box">
                     <span class="price">
-                        A partir de <span class="real">R$</span>
+                       <p class="from">A partir de</p> <span class="real">R$</span>
                         <span class="real-value">255</span>
                         <span class="cents">,65*</span>
-                    </span>
-                    <button class="see-more" onclick="openModal()">Ver mais</button>
+                    </span>                 
+                        <button class="modalLink">Ver mais</button>     
+                       <div class="goldenPlanContainer">
+                            <div class="goldenPlanModal" id="modalPlan" onmouseleave="fadeOut()">
+                            <button id="closePlanModal">x</button>
+                            <img src="./assets/images/doctorImg.png" alt="">
+                            <p>Quer saber mais sobre <br>o <strong>plano Ouro</strong>? <br>
+                            <a href="#" id="scrollToBottom">Clique aqui</a> e fale conosco!</p>
+                        </div>     
+                       </div>                           
                 </div>
                 <div class="price-obs">
                     <p>*Valor referente ao plano Ouro Copar Q (ANS: 481.277/18-8) de 3 à 9 vidas, com 20% <br> de copart. com faixa 
-                    etária entre 0 e 18 anos. Sem IOF.<br> Promoção válida até 30 de abril de 2021.</p>
+                    etária entre 0 e 18 anos. Sem IOF.<br> Promoção válida até 30 de abril de 2021.</p>                    
                 </div>
+                
             </div>
+            
         </div>
+        
         <div class="modal-container">
             <div class="modal">
-                
                 <div class="modal-text-box">
                     <button class="modal-button" onclick="closeModal()">x</button>
                     <h1>Hospitais de referência</h1>
@@ -111,7 +124,7 @@
                     <ul>
                         <li>Hospital Alemão Oswaldo Cruz</li>
                         <li>Hospital 9 de julho</li>
-                        <li>Hospital São Luiz - Anália Franco / <br>
+                        <li>Hospital São Luiz - Anália Franco /
                         Itaim / Morumbi /S.C.Sul</li>
                     </ul>
                 </div>
@@ -119,9 +132,9 @@
                     <i class="fas fa-download"></i>
                     <a>Baixe a lista completa de hospitais</a>
                 </div>
-               
             </div>
         </div>
+        
     </section>
     <main>
         <div class="container-lg">
@@ -222,7 +235,7 @@
                              </div>
                         </div>
                     </div>
-                    <div class="hospital-card">
+                    <div class="hospital-card hospital2">
                         <img src="./assets/images/hospital-perinatal.png" alt="">
                         <h1 class="card-title">Hospital Perinatal Laranjeiras</h1>
                         <i class="fas fa-chevron-down"></i>
@@ -247,7 +260,7 @@
                             <p class="card-p">Com o plano Ouro da Porto Seguro Saúde, você conta com
                             uma <strong>rede referenciada de hospitais</strong> com toda a comodidade 
                             que você e seus funcionários precisam.</p>
-                            <button>Veja a lista completa de hospitais</button>
+                            <button onclick="handleModal()">Veja a lista completa de hospitais</button>
                         </div>
                     </div>
                     <div class="benefits-card">
@@ -321,7 +334,7 @@
                     <form>
                         <div>
                             <label for="name">Nome:</label>
-                            <input type="text" name="name" id="" placeholder="Seu nome.">
+                            <input type="text" name="name" id="inputName" placeholder="Seu nome.">
                         </div>
                         <div>
                             <label for="telephone">Telefone:</label>
