@@ -225,6 +225,7 @@ header nav ul li a {
     text-decoration: none;
     color: var(--yellow-font-1);
     font-size: 2.1rem;
+    cursor: pointer;
 }
 
 nav {
@@ -331,6 +332,7 @@ section.hero .container-lg {
     box-shadow: 0px 3px 6px #0000008A;
     border-radius: 1.9rem;
 }
+
 /*Estilização do modal com link para a formulário de contato*/
 .goldenPlanContainer {
     position: fixed;
@@ -377,6 +379,7 @@ section.hero .container-lg {
     border: none;
     font-size: 16px;
     margin-right: 12px;
+    cursor: pointer;
 }
 
 .goldenPlanModal img {
@@ -461,6 +464,7 @@ section.hero .container-lg {
     color: var(--close-button);
     font-size: 3.0rem;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .modalAnimation {
@@ -518,6 +522,7 @@ section.hero .container-lg {
     font-weight: 900;
     margin: 3.0rem 1.0rem 1.4rem 1.0rem;
     width: 90%;
+    cursor: pointer;
 }
 
 .hospital-list-download i {
@@ -630,6 +635,7 @@ main .container-lg {
     text-transform: uppercase;
     padding: 0.7rem;
     font-weight:600;
+    cursor: pointer;
 }
 
 .collapse-btn-box button {
@@ -830,11 +836,13 @@ section .hospitals {
 .btnAccordion {
     transform: rotate(180deg);
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .btnAccordionOff {
     transform: rotate(-180);
     transition: 0.4s;
+    cursor: pointer;
 }
 /*-=-=-=-=-= SECTION BENEFÍCIOS DO PLANO -=-=-=-=-=*/
 .benefits-cards {
@@ -877,6 +885,7 @@ section .hospitals {
     font-size: 0.9rem;
     color: var(--white);
     margin: 3.0rem 0rem 3.3rem 0rem;
+    cursor: pointer;
 }
 
 .benefits-cards p:nth-child(3) {
@@ -1038,6 +1047,7 @@ form input[type=submit] {
     margin-inline: auto;
     width: 289px;
     height: 43px;
+    cursor: pointer;
 }
 
 .send-msg-box {
@@ -1069,6 +1079,7 @@ form input[type=submit] {
     justify-content: center;
     color: var(--white);
     box-shadow: 0px 3px 6px #00000029;
+    cursor: pointer;
 }
 
 .wpp-box {
