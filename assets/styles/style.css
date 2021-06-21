@@ -16,6 +16,7 @@ do projeto*/
     --yellow-color-6: #FFD984;
     --yellow-color-7: #B47D07;
     --yellow-color-8: #D7A636;
+    --input-border: #D0BC90;
     --close-button: #C9C9C9;
     --black: #000;
     --black-1: #171717;
@@ -114,7 +115,7 @@ header .logo-box img:last-child {
     height: calc(100vh - 60px);
     width: 100vw;
     background-color: var(--yellow-color-3);
-    z-index: 20;
+    z-index: 9999;
     display: flex;
     justify-content: flex-start;
     transition: 0.4s;
@@ -244,7 +245,7 @@ section.hero .container-lg {
     font-size: 3.0rem;
     color: var(--white);
     text-shadow: 0px 3px 4px #00000082;
-    font-weight:bold;
+    font-weight:900;
     margin-bottom: 1.0rem;
     
 }
@@ -352,9 +353,8 @@ section.hero .container-lg {
     color: var(--yellow-color-2);
 }
 .price-obs {
-    color: var(--white);
+    color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
-    opacity: 0.5;
     margin-bottom: 3.0rem;
     text-align: left;
     display: flex;
@@ -458,7 +458,7 @@ section.hero .container-lg {
     padding: 0.7rem 1.9rem;
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 15px;
-    font-weight: bold;
+    font-weight: 900;
     margin: 3.0rem 1.0rem 1.4rem 1.0rem;
     width: 90%;
 }
@@ -479,7 +479,7 @@ main .container-lg {
 
 .section-title{
     font-size: 2.2rem;
-    font-weight: bold;
+    font-weight: 900;
     color: var(--black-1);
 }
  .title-bar {
@@ -499,12 +499,17 @@ main .container-lg {
     background-color: var(--yellow-color-1);
     border-radius: 12px;
     box-shadow: 0px 3px 6px #00000029;
-    padding: 2.3rem 2.7rem 3.1rem 2.7rem;
+    padding: 2.3rem ;
+    margin-bottom: 2.2rem;
     color: var(--white);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
+    /* flex: 1; */
     /* align-items: center; */
+}
+.golden-plan-box {
+
 }
 .golden-plan-box h6 {
     font-size: 1.5rem;
@@ -537,7 +542,7 @@ main .container-lg {
     align-items: center;
     max-width: 135px;
     margin-left: 0.5rem;
-    margin-right: 2.5rem;
+    /* margin-right: 2.5rem; */
 }
 .description-plan-box p {
     font-size: 0.7rem;
@@ -551,7 +556,7 @@ main .container-lg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1;
+    max-width: 30rem;
     margin-top: 2.2rem;
 }
 
@@ -560,7 +565,7 @@ main .container-lg {
     box-shadow: 0px 3px 6px #00000029;
     border-radius: 15px;
     width: 100%;
-    font-size:1.2rem ;
+    font-size:1.2rem;
     text-transform: uppercase;
     padding: 0.7rem;
     font-weight:600;
@@ -568,9 +573,11 @@ main .container-lg {
 .collapse-btn-box button {
     background-color: var(--yellow-color-2);
     color: var(--white);
-    font-size:1.2rem ;
+    font-size:1.2rem;
     margin-bottom: 1.9rem;
     letter-spacing: 0.12rem;
+    padding: 0.7rem 3.9rem 0.6rem 3.1rem;
+    text-align: center; 
 }
 .collapse-btn-box .btn-box {
     background-color: var(--yellow-color-3);
@@ -578,20 +585,23 @@ main .container-lg {
     justify-content: center;
     align-items: center;
     font-size:1.2rem ;
+    padding: 0.7rem 2.0rem 0.6rem 2.7rem;
 }
 .btn-box i {
     margin-right: 0.5rem;
 }
-.collapse-container {
-    margin-bottom: 2.2rem;
-}
-.collapse-container ul li {
+.hospital-ul-li {
     list-style: none;
     border-bottom: 1px solid var(--yellow-color-7);
     padding: 1.0rem;
     font-size: 1.5rem;
 }
-.collapse-container ul li p {
+.hospital-ul-li.liFlex {
+    list-style: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+.hospital-ul-li p {
     font-size: 1.0rem;
     color: var(--white);
     margin-bottom: 0;
@@ -601,24 +611,30 @@ main .container-lg {
     flex-direction: column;
     align-items: center;
 }
+
+/* .flexList {
+    display: flex;
+    border: none;
+} */
+
 .collapsed-container ul {
     margin-bottom: 1.25rem;
 }
 .displayOff {
     display: none;
 }
-.accomodation, .coverage {
+.accommodation, .coverage {
     display: flex;
     align-items: center;
 }
-.accomodation svg, .coverage svg {
+.accommodation svg, .coverage svg {
     margin-right: 2.5rem;
 }
-.accomodation p , .coverage p {
+.accommodation p , .coverage p {
     font-style: normal;
     color: var(--white);
 } 
-.accomodation p strong, .coverage p strong {
+.accommodation p strong, .coverage p strong {
     font-size: 1.5rem;
     color: var(--white);
     font-weight: 900;
@@ -656,7 +672,7 @@ section .hospitals {
 .hospitals-cards {
     display: flex;
     flex-wrap:wrap;
-    justify-content:space-between;
+    justify-content:space-around;
 }
 .hospital-card, .health-card, .benefits-card {
     display: flex;
@@ -690,16 +706,33 @@ section .hospitals {
 }
 .card-accordion {
     padding: 0rem 2.5rem;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
     display: none;
+}
+.card-accordion-p-box {
+    /* max-width: 50%; */
+    max-width: 289px;
 }
 .card-accordion p{
     font-size: 1.2rem;
     color: var(--gray);
     margin-bottom: 1.9rem;
+    
 }
 .hospital-address, .hospital-telephone {
     display: flex;
 }
+.hospital-address {
+    border-top: 1px solid var(--gray-3);
+    padding-top: 1.9rem;
+    padding-bottom: 0.9rem;
+}
+.hospital-address strong {
+    margin-right: 5px;
+}
+
 .hospital-address i, .hospital-telephone i {
     color: var(--yellow-color-2);
     margin-right: 0.8rem;
@@ -708,11 +741,7 @@ section .hospitals {
     font-size: 1.2rem;
     font-style: normal;
 }
-.hospital-address {
-    border-top: 1px solid var(--gray-3);
-    padding-top: 1.9rem;
-    padding-bottom: 0.9rem;
-}
+
 .hospital-address address {
     font-style: normal;
     color: var(--gray);
@@ -882,13 +911,15 @@ section .hospitals {
     margin-top: 0.4rem;
     font-size: 0.9rem;
     color: var(--gray);
+    border: 1px solid var(--input-border);
 }
 form img {
     max-height: 10.1rem;
     margin-bottom: 1.9rem;
+    margin-inline: auto;
 }
 form input[type=submit] {
-    font-size: 1.5rem;
+    font-size: 15px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -898,6 +929,9 @@ form input[type=submit] {
     box-shadow: 0px 3px 6px #00000029;
     border: none;
     border-radius: 50px;
+    margin-inline: auto;
+    width: 289px;
+    height: 43px;
 }
 .send-msg-box {
     display: flex;
@@ -964,6 +998,7 @@ footer {
 footer div {
     display: flex;
     align-items: center;
+    margin-bottom: 7px;
 }
 
 footer img:nth-child(1) {

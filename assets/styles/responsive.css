@@ -1,4 +1,54 @@
+@media (min-width: 690px) {
+   
+    .description-plan-box {
+        align-items: flex-start;
+    }
+    .card-accordion {
+        /* display: flex; */
+    }
+    .flex-list {
+        padding: 30px;
+    }
+    .flex-list:nth-child(2) {
+        border-bottom: 1px solid var(--white);
+    }
+    .accommodation-box {
+        margin-top: 35px;
+    }
+    .accommodation {
+        margin-right: 86px;
+    }
+    .accommodation svg, .coverage svg {
+        margin-right: 13px;
+    }
+    .hospital-ul-li {
+        border: none;
+    }
+    .accommodation-box {
+        display: flex;
+    }
+}
+@media (min-width: 768px) {
+   
+}
 @media (min-width: 840px) {
+    .hospital-address {
+        display: flex;
+    }
+    .hospital-address, .hospital-telephone {
+        padding-left: 25px;
+    }
+    .card-accordion-p-box {
+        max-width: 50%;
+        
+    }
+    .card-accordion-p-box p {
+        padding-right: 25px;
+        border-right: 1px solid var(--gray-3);
+    }
+    .hospital-address {
+        border-top: none;
+    }
     .menu-toggle {
         display: none;
     }
@@ -24,6 +74,35 @@
     }
     .hospital-card:nth-child(3) {
         margin-left: 1.0rem;
+    }
+    .description-plan-box {
+        max-width: 210px;
+    }
+    .form-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .form-box form, .send-msg-box {
+        flex: 1;
+        
+    }
+    .form-box form {
+        padding-right: 62px;
+        border-right: 1px solid var(--gray-3);
+    }
+    form img {
+        width:214px;
+        height: 62px;
+    }
+    .send-msg-box {
+        padding-left: 62px;
+    }
+    footer div {
+        margin-bottom: 31px;
+    }
+    .footer-p {
+        max-width: 516px;
     }
 }
 @media (min-width: 992px) {
