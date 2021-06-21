@@ -2,6 +2,7 @@
 window.onscroll = function() {
     myFunction()
 };
+
 var header = document.getElementById("header")
 var sticky = header.offsetTop;
 function myFunction() {
@@ -49,6 +50,7 @@ function fadeOut() {
 function scrollTo(element) {
     document.querySelector(element).scrollIntoView({behavior: "smooth"});
 }
+
 let scroll = document.getElementById('scrollToBottom').addEventListener("click", (event) => {
     event.preventDefault();
     scrollTo(".more-information .section-title");
@@ -73,7 +75,6 @@ function handleModal() {
     // modal.classList.add('modalAnimation')
 }
 /*XXXXXXXX-------- FIM DA FUNÇÃO DE LIDAR COM O MODAL--------XXXXXXXX*/
-
 
 /*-=-=-=-= BLOCO DA FUNÇÃO DE LIDAR COM ACCORDION (COLLAPSE) DO HOSPITAL -=-=-=-=*/
 let btnToggle = document.querySelector('.collapse-btn');
@@ -114,9 +115,6 @@ btnToggle.addEventListener('click', function() {
     aux = !aux;
 });
 /*XXXXXXXX-------- FIM DO BLOCO DE FUNÇÃO PARA O ACCORDION (COLLAPSE) DO HOSPITAL--------XXXXXXXX*/
-
-
-
 
 /*-=-=-=-= BLOCO DA FUNÇÃO PARA O ACCORDION -=-=-=-=*/
 let btnAccordion = document.querySelector('#arrowAccordion')

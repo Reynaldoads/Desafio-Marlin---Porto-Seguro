@@ -29,12 +29,14 @@ do projeto*/
     --gray-7: #8a8a8a;
     --white: #fff;
 }
+
 html, body {
     height: 100vh;
     font-family: var(--open-sans);
     text-rendering: optimizelegibility;
     -webkit-font-smoothing: antialiased;
 }
+
 html {
     font-size: 62.5%;
 }
@@ -44,6 +46,8 @@ header {
     box-shadow: 0px 5px 6px #00000086;
     background-color: var(--white);
 }
+
+/*Sticky é classe utilizada para fixar menu no topo*/
 .sticky {
     position: fixed;
     /* top: 0; */
@@ -52,12 +56,14 @@ header {
   .sticky + main {
     padding-top: 102px;
   }
+
 header .container-lg {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin:auto;
 }
+
 header .logo-box {
     display: flex;
     align-items: center;
@@ -69,11 +75,13 @@ header .logo-box img:first-child {
     height: 3.0rem;
     margin-right: 2.0rem;
 }
+
 /*Segunda imagem do header*/
 header .logo-box img:last-child {
     width: 7.3rem;
     height: 2.0rem;
 }
+
 /*Menu de hamburguer */
 .one, .two, .three {
     background-color:var(--black);
@@ -82,6 +90,8 @@ header .logo-box img:last-child {
     margin: 6px auto;
     transition-duration: 0.3s;
 }
+
+/*Inicio do CSS Menu mobile-desktop*/
 .menu-section.on .menu-toggle .one {
     transform: rotate(41deg) translate(5px, 1px);
 }
@@ -93,22 +103,14 @@ header .logo-box img:last-child {
 .menu-section.on .menu-toggle .three {
     transform: rotate(-39deg) translate(8px, -10px)
 }
-.hero {
-    margin-bottom: 4.0em;
-    display: flex;
-    /* flex-direction: column; */
-}
- .hero .container-lg {
-    flex-direction: column;
-    text-align: center;
-}
+
 .menu-toggle {
     width: 35px;
     height: 21px;
 }
+
 .menu-section.on {
     position: absolute;
-    /* bottom: 0; */
     top: 60px;
     left: 0;
     right: 0;
@@ -120,12 +122,14 @@ header .logo-box img:last-child {
     justify-content: flex-start;
     transition: 0.4s;
 }
+
 .menu-section.on .menu-toggle {
     position: absolute;
     right: 25px;
     top: -42px;
     margin-right: 2.1rem;
 }
+
 .menu-section.on nav {
     display: flex;
     flex-direction: column;
@@ -133,6 +137,7 @@ header .logo-box img:last-child {
     width: 100vw;
     color: var(--white);
 }
+
 .menu-section.on nav ul {
     text-align: left;
     display: flex;
@@ -147,9 +152,11 @@ header .logo-box img:last-child {
     letter-spacing: 0.42rem;
     font-weight: 600;
 }
+
 .menu-section.on .talk-to-us-box {
     padding: 20px 0px;
 }
+
 .menu-section.on .talk-to-us-box {
     display: block;
     max-width: 340px;
@@ -158,15 +165,18 @@ header .logo-box img:last-child {
     align-items: center;
     margin: 0 auto;
 }
+
 .menu-section.on .talk-to-us-box .contact-number {
     text-align: center;
     margin-bottom: 1.0rem;
 }
+
 .menu-section.on .talk-to-us-box .contact-number p:first-child {
     font-size: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
 }
+
 .menu-section.on .talk-to-us-box .contact-number p:last-child {
     font-size: 2.5rem;
     font-weight:900;
@@ -183,17 +193,21 @@ header .logo-box img:last-child {
     box-shadow: 0px 3px 6px #00000029;
 
 }
+
 .menu-section.on .talk-to-us-box .whatsapp i, .talk-to-us-box .call-us i {
     margin-right: 1.0rem;
     font-size: 2.6rem;
 }
+
 .menu-section.on .talk-to-us-box .whatsapp p, .talk-to-us-box .call-us p{
     font-size: 1.5rem;
 }
+
 .menu-section.on .talk-to-us-box .whatsapp {
     padding: 1.8rem 4.5rem;
     margin-bottom: 1.0rem;
 }
+
 .menu-section.on .talk-to-us-box .call-us {
     padding: 2.8rem 4.4rem;
     margin-bottom: 1.0rem;
@@ -202,6 +216,7 @@ header .logo-box img:last-child {
 header nav ul {
     display: flex;
 }
+
 header nav ul li {
     list-style: none;
 }
@@ -221,6 +236,13 @@ section.hero .container-lg {
     display: flex;
     align-items: flex-start;
 }
+
+/*Estilização do banner(hero)*/
+ .hero .container-lg {
+    flex-direction: column;
+    text-align: center;
+}
+
 .hero {
     background: url('../images/hero-image.png');
     background-position:right;
@@ -228,11 +250,14 @@ section.hero .container-lg {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    margin-bottom: 4.0em;
 }
+
 .hero-content {
     margin-top: 254px;
     max-width: 337px;
 }
+
 .golden-plan-p {
     text-align: left;
     font-size: 2.5rem;
@@ -240,52 +265,61 @@ section.hero .container-lg {
     margin-bottom: 20px;
     display: none;
 }
+
  .hero-content h1{
     text-align: left;
     font-size: 3.0rem;
     color: var(--white);
     text-shadow: 0px 3px 4px #00000082;
     font-weight:900;
-    margin-bottom: 1.0rem;
-    
+    margin-bottom: 1.0rem;  
 }
+
 .hero-content .white-bar {
     background-color: var(--white);
     width: 16.2rem;
     height: 0.2rem;
     margin-bottom: 2.7rem;
 }
+
 .hero-price-box {
     margin-bottom: 1.2rem;
     display: flex;
     align-items: center;
     color: var(--white);
 }
+
 .price {
     display: flex;
     align-items: center;
     margin-right: 1.0rem;
 }
+
 .hero-price-box .price .from{
     font-size: 1.7rem;
     font-style: italic;
     margin-right: 1.0rem;
 }
+
 .hero-price-box .real {
     font-size: 1.7rem;
     font-weight: 700;
 }
+
 .hero-price-box .price {
     display: flex;
 }
+
 .price .real-value {
     font-size: 3.3rem;
     font-weight: 700;
 }
+
 .hero-price-box .cents {
     font-size: 1.8rem;
     font-weight: 900;
 }
+
 .hero-price-box .modalLink {
     font-size: 1.3rem;
     border: none;
@@ -297,11 +331,11 @@ section.hero .container-lg {
     box-shadow: 0px 3px 6px #0000008A;
     border-radius: 1.9rem;
 }
+/*Estilização do modal com link para a formulário de contato*/
 .goldenPlanContainer {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    /* background-color: rgba(0, 0, 0, 0.397); */
     bottom: 0;
     left: 0; 
     z-index: 2000;
@@ -311,11 +345,14 @@ section.hero .container-lg {
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
+    text-align: left;
 }
+
 .goldenPlanContainer.show {
     opacity: 1;
     pointer-events: auto;
 }
+
 .goldenPlanModal {
     display: flex;
     justify-content: center;
@@ -329,9 +366,11 @@ section.hero .container-lg {
     position: absolute;
     bottom: 25px;
 }
+
 .goldenPlanModal.fade {
     opacity: 1;
 }
+
 .goldenPlanModal button {
     color: var(--gray-7);
     background-color: transparent;
@@ -339,19 +378,27 @@ section.hero .container-lg {
     font-size: 16px;
     margin-right: 12px;
 }
+
 .goldenPlanModal img {
     width: 48px;
     height: 48px;
     margin-right: 16px;
 }
+
 .goldenPlanModal p, .goldenPlanModal a {
     font-size: 12px;
     color: var(--gray);
 }
 
+.goldenPlanModal a {
+    text-decoration: none;
+    padding-top: 5px;
+}
+
 .goldenPlanModal strong {
     color: var(--yellow-color-2);
 }
+
 .price-obs {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.8rem;
@@ -361,7 +408,7 @@ section.hero .container-lg {
     justify-content: space-between;
 }
 
-/************CONTAINER DO MODAL*************/
+/*Estilização do container do modal de hospitais*/
 .modal-container {
     position: fixed;
     width: 100vw;
@@ -377,6 +424,7 @@ section.hero .container-lg {
     pointer-events: none;
     transition: opacity 0.3s ease-in-out;
 }
+
 .modal-container.show {
     opacity: 1;
     pointer-events: auto;
@@ -392,6 +440,7 @@ section.hero .container-lg {
     align-items: center;
     min-width: 30.9rem;
 }
+
 @keyframes modal {
     from {
         opacity: 0;
@@ -403,6 +452,7 @@ section.hero .container-lg {
         transform: translate3d(0, 0, 0);
     }
 }
+
 .modal .modal-button {
     position: absolute;
     top: -2.5rem;
@@ -412,6 +462,7 @@ section.hero .container-lg {
     font-size: 3.0rem;
     background-color: transparent;
 }
+
 .modalAnimation {
     animation: modal .3s;
 }
@@ -422,6 +473,7 @@ section.hero .container-lg {
     color: var(--yellow-color-5);
     font-weight: 700;
 }
+
 .modal-text-box {
     display: flex;
     justify-content:flex-start;
@@ -430,6 +482,7 @@ section.hero .container-lg {
     text-align:left;
     position: relative;
 }
+
 .modal h3 {
     font-size: 1.2rem;
 }
@@ -437,17 +490,21 @@ section.hero .container-lg {
 .modal ul {
     list-style: none;
 }
+
 .modal ul li {
     font-size: 1.2rem;
     margin: 0.3rem 0rem;
 }
+
 .modal-text-box h3:nth-last-child(2) {
     margin-top: 2.0rem;
 }
+
 .modal ul li::before {
     content: "-";
     margin-right: 2px;
 }
+
 .hospital-list-download {
     display: flex;
     align-items: center;
@@ -462,18 +519,16 @@ section.hero .container-lg {
     margin: 3.0rem 1.0rem 1.4rem 1.0rem;
     width: 90%;
 }
+
 .hospital-list-download i {
     margin-right: 3px;
 }
 
-/*-=-=-=-=-= SESSÃO PLANO OURO -=-=-=-=-=*/
+/*-=-=-=-=-= SECTION PLANO OURO (default) -=-=-=-=-=*/
 
 main .container-lg {
-    /* display: flex; */
-    /* justify-content: space-between; */
     flex-direction: column;
     width: 90%;
-    /* max-width: 1160px; */
     margin:auto;
 }
 
@@ -482,6 +537,7 @@ main .container-lg {
     font-weight: 900;
     color: var(--black-1);
 }
+
  .title-bar {
     max-width: 16.2rem;
     height: 0.2rem;
@@ -489,12 +545,14 @@ main .container-lg {
     margin-top: 1.5rem;
     margin-bottom: 1.8rem;
 }
+
 .default-section-p  {
     font-size: 1.5rem;
     text-align: left;
     color: var(--gray);
     margin-bottom:1.5rem ;
 }
+
 .collapse-container {
     background-color: var(--yellow-color-1);
     border-radius: 12px;
@@ -505,18 +563,15 @@ main .container-lg {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    /* flex: 1; */
-    /* align-items: center; */
 }
-.golden-plan-box {
 
-}
 .golden-plan-box h6 {
     font-size: 1.5rem;
     color: var(--yellow-color-6);
     font-weight: 600;
     margin-bottom: 0.6rem;
 }
+
 .golden-plan-box p {
     font-style: italic;
     font-size: 1.5rem;
@@ -524,34 +579,40 @@ main .container-lg {
     font-weight: normal;
     margin-bottom: 0px;
 }
+
 .golden-plan-box .real {
     font-size: 2.1em;
     font-weight: 900;
 }
+
 .golden-plan-box .real-value {
     font-size: 4.0rem;
     font-weight: 900;
 }
+
 .golden-plan-box .cents {
     font-size: 2.2rem;
     font-weight: 900;
 }
+
 .description-plan-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 135px;
     margin-left: 0.5rem;
-    /* margin-right: 2.5rem; */
 }
+
 .description-plan-box p {
     font-size: 0.7rem;
     color: var(--white);
 }
+
 .description-plan-box img {
     margin-top: 1.5rem;
     max-width: 8.9rem;
 }
+
 .collapse-btn-box {
     display: flex;
     flex-direction: column;
@@ -570,6 +631,7 @@ main .container-lg {
     padding: 0.7rem;
     font-weight:600;
 }
+
 .collapse-btn-box button {
     background-color: var(--yellow-color-2);
     color: var(--white);
@@ -579,6 +641,7 @@ main .container-lg {
     padding: 0.7rem 3.9rem 0.6rem 3.1rem;
     text-align: center; 
 }
+
 .collapse-btn-box .btn-box {
     background-color: var(--yellow-color-3);
     display: flex;
@@ -587,58 +650,64 @@ main .container-lg {
     font-size:1.2rem ;
     padding: 0.7rem 2.0rem 0.6rem 2.7rem;
 }
+
 .btn-box i {
     margin-right: 0.5rem;
 }
+
 .hospital-ul-li {
     list-style: none;
     border-bottom: 1px solid var(--yellow-color-7);
     padding: 1.0rem;
     font-size: 1.5rem;
 }
+
 .hospital-ul-li.liFlex {
     list-style: none;
     padding: 0.5rem;
     font-size: 1.5rem;
 }
+
 .hospital-ul-li p {
     font-size: 1.0rem;
     color: var(--white);
     margin-bottom: 0;
 }
+
 .collapsed-container {
     display: none;
     flex-direction: column;
     align-items: center;
 }
 
-/* .flexList {
-    display: flex;
-    border: none;
-} */
-
 .collapsed-container ul {
     margin-bottom: 1.25rem;
 }
+
 .displayOff {
     display: none;
 }
+
 .accommodation, .coverage {
     display: flex;
     align-items: center;
 }
+
 .accommodation svg, .coverage svg {
     margin-right: 2.5rem;
 }
+
 .accommodation p , .coverage p {
     font-style: normal;
     color: var(--white);
 } 
+
 .accommodation p strong, .coverage p strong {
     font-size: 1.5rem;
     color: var(--white);
     font-weight: 900;
 }
+
 @keyframes accordion {
     from {
         opacity: 0;
@@ -650,12 +719,15 @@ main .container-lg {
         transform: translate3d(0, 0, 0);
     }
 }
+
 .accordion {
     animation: accordion 0.4s;
 }
+
 .accordionOff {
     animation: accordionOff 0.4s;
 }
+
 @keyframes accordionOff {
     from {
         opacity: 1;
@@ -666,14 +738,17 @@ main .container-lg {
         transform: translate3d(0, -60px, 0);
     }
 }
+/*-=-=-=-=-= SECTION HOSPITAIS EM DESTAQUE -=-=-=-=-=*/
 section .hospitals {
     display: flex;
 }
+
 .hospitals-cards {
     display: flex;
     flex-wrap:wrap;
     justify-content:space-around;
 }
+
 .hospital-card, .health-card, .benefits-card {
     display: flex;
     flex-direction: column;
@@ -683,52 +758,51 @@ section .hospitals {
     margin-bottom: 2.3rem;
     max-width: 34.0rem;
 }
-.hospital-card {
-    /* flex: 1; */
-    /* max-width: 100%; */
-    /* margin:0 1.0rem; */
-}
+
 .hospital-card img, .health-card img{
     max-width: 100%;
 }
+
 .card-title {
     font-weight: 900;
     font-size: 1.5rem;
     margin-top: 0.9rem;
     color: var(--yellow-color-5);
-    max-width: 19.0rem;
     text-align: center;
 }
+
 .hospital-card i{
     color: var(--gray-2);
     font-size: 2.0rem;
     margin-bottom: 1.2rem;
 }
+
 .card-accordion {
     padding: 0rem 2.5rem;
-    box-shadow: 0px 3px 6px #00000029;
-    border-radius: 12px;
     margin-bottom: 2.5rem;
     display: none;
 }
+
 .card-accordion-p-box {
-    /* max-width: 50%; */
     max-width: 289px;
 }
+
 .card-accordion p{
     font-size: 1.2rem;
     color: var(--gray);
     margin-bottom: 1.9rem;
-    
 }
+
 .hospital-address, .hospital-telephone {
     display: flex;
 }
+
 .hospital-address {
     border-top: 1px solid var(--gray-3);
     padding-top: 1.9rem;
     padding-bottom: 0.9rem;
 }
+
 .hospital-address strong {
     margin-right: 5px;
 }
@@ -737,6 +811,7 @@ section .hospitals {
     color: var(--yellow-color-2);
     margin-right: 0.8rem;
 }
+
 .hospital-address p, .hospital-address p{
     font-size: 1.2rem;
     font-style: normal;
@@ -747,22 +822,27 @@ section .hospitals {
     color: var(--gray);
     font-size: 1.2rem;
 }
+
 .hospital-telephone  {
     padding-bottom: 2.0rem;
 }
+
 .btnAccordion {
     transform: rotate(180deg);
     transition: 0.4s;
 }
+
 .btnAccordionOff {
     transform: rotate(-180);
     transition: 0.4s;
 }
+/*-=-=-=-=-= SECTION BENEFÍCIOS DO PLANO -=-=-=-=-=*/
 .benefits-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .benefits-card {
     margin-bottom: 2.3rem;
 }
@@ -774,14 +854,17 @@ section .hospitals {
     align-items: center;
     justify-content: center;
 }
+
 .benefits-card img {
     max-width: 100%;
 }
+
 .benefits-card .card-p {
     font-size: 1.2rem;
     color: var(--gray-4);
     margin-top: 0.8rem;
 }
+
 .benefits-card button {
     background-color: var(--yellow-color-3);
     box-shadow: 0px 3px 6px #00000029;
@@ -795,15 +878,18 @@ section .hospitals {
     color: var(--white);
     margin: 3.0rem 0rem 3.3rem 0rem;
 }
+
 .benefits-cards p:nth-child(3) {
     color: var(--gray-5);
     padding: 0rem 2.5rem 3.0rem;
 }
+/*-=-=-=-=-= SECTION SERVIÇOES ESPECIAIS -=-=-=-=-=*/
 .health-cards {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
+
 .health-card-title {
     font-size: 2.0rem;
     font-weight: 900;
@@ -812,12 +898,14 @@ section .hospitals {
     margin-bottom: 1.8rem;
     text-transform: uppercase;
 }
+
 .health-card p {
     font-size: 1.5rem;
     color: var(--gray-5);
     text-align: center;
     margin-bottom: 2.5rem;
 }
+
 .card-bar {
     height: 2px;
     width: 16.2rem;
@@ -829,15 +917,18 @@ section .hospitals {
     list-style: none;
     margin-bottom: 4.3rem;
 }
+
 .card-content ul li {
     font-size: 1.4rem;
     margin-bottom: 1.8rem;
     display: flex;
 }
+
 .card-content ul li p {
     max-width: 23.5rem;
     text-align: left;
 }
+
 .card-content ul li p:last-child,
  .card-content ul li:last-child {
     margin-bottom: 0rem;
@@ -848,16 +939,19 @@ section .hospitals {
     color: var(--yellow-color-8);
     margin-right: 0.5rem;
 }
+
 .health-card .card-p-content {
     display: flex;
     align-items: baseline;
 }
+
 .health-card .check {
     color: var(--yellow-color-8);
     margin-right: 0.5rem;
     display: inline-flex;
     font-size: 1.4rem;
 }
+
 .health-card .card-p {
     font-size: 1.4rem;
     color: var(--gray-5);
@@ -866,59 +960,70 @@ section .hospitals {
     line-height: 2.0em;
 }
 
-/************ MAIS INFORMAÇÕES ************/
+/*-=-=-=-=-= SECTION MAIS INFORMAÇÕES -=-=-=-=-=*/
 .more-information {
     margin-bottom:3.7rem;
 }
+
 .phone-call-box {
     display: flex;
     margin-bottom: 2.1rem;
-    /* flex-direction: column; */
 }
+
 .phone-call-box p {
     font-size: 1.5rem;
     color: var(--gray);
     max-width: 80.6rem;
     margin-left: 1.54rem;
 }
+
 .phone-call-box .svg-box {
     max-width: 10.1rem;
     height: 10.1rem;
 }
+
 .phone-call-box svg {
     height: 100%;
 }
+
 .form-box {
     display: flex;
     flex-direction: column;
     align-items: center ;
 }
+
 .form-box form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 2.5rem;
 }
+
 .form-box form div {
     margin-bottom: 2.0rem;
 }
+
 .form-box form label {
     font-size: 1.2rem;
     color: var(--yellow-color-5);
     font-weight: 900;
     text-transform: uppercase;
 }
+
 .form-box form input {
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     margin-top: 0.4rem;
     font-size: 0.9rem;
     color: var(--gray);
     border: 1px solid var(--input-border);
 }
+
 form img {
     max-height: 10.1rem;
     margin-bottom: 1.9rem;
     margin-inline: auto;
 }
+
 form input[type=submit] {
     font-size: 15px;
     font-weight: 600;
@@ -934,11 +1039,13 @@ form input[type=submit] {
     width: 289px;
     height: 43px;
 }
+
 .send-msg-box {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .send-msg-box p:first-child{
     font-size: 1.5rem;
     color: var(--gray);
@@ -946,12 +1053,14 @@ form input[type=submit] {
     text-transform: uppercase;
     margin-bottom: 0.6rem;
 }
+
 .send-msg-box p:nth-child(2){
     font-size: 2.5rem;
     color: var(--yellow-color-5);
     font-weight: 900;
     margin-bottom: 1.3rem;
 }
+
 .wpp-box, .call-box {
     background-color: var(--yellow-color-2);
     border-radius: 12px;
@@ -961,34 +1070,41 @@ form input[type=submit] {
     color: var(--white);
     box-shadow: 0px 3px 6px #00000029;
 }
+
 .wpp-box {
     padding: 1.2rem 4.5rem;
     margin-bottom: 2.6rem;
 }
+
 .call-box {
     padding: 1.8rem 4.5rem;
     margin-bottom: 1.0rem;
 }
+
 .wpp-box a, .call-box a {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--white);
     text-transform: uppercase;
 }
+
 .wpp-box i {
     font-size: 5.0rem;
     margin-right: 1.4rem;
 }
+
 .call-box i {
     font-size: 3.9rem;
     margin-right: 2.1rem;
 }
+
 .send-msg-box p:last-child {
     font-size: 1.2rem;
     color: var(--gray-6);
     margin-bottom: 1.3rem;
 }
-/************* FOOTER **********/
+
+/*-=-=-=-=-= FOOTER (rodapé do site) -=-=-=-=-=*/
 footer {
     background-color: var(--yellow-color-3);
     display: flex;
@@ -996,6 +1112,7 @@ footer {
     justify-content: center;
     flex-direction: column;
 }
+
 footer div {
     display: flex;
     align-items: center;
@@ -1011,6 +1128,7 @@ footer img:last-child {
   max-width: 4.7rem;
   margin-left: 0.6rem;
 }
+
 footer p {
     font-size: 1.1rem;
     color: var(--white);
