@@ -32,11 +32,17 @@
    
 }
 @media (min-width: 840px) {
+    html {
+        font-size: 100%;
+    }
     .hospital-address {
         display: flex;
-    }
+    }   
     .hospital-address, .hospital-telephone {
         padding-left: 25px;
+    }
+    .card-accordion {
+        padding:51px 33px 41px 61px;
     }
     .card-accordion-p-box {
         max-width: 50%;
@@ -58,6 +64,12 @@
     .talk-to-us-box {
         display: none;
     }
+    .modal-container {
+        height: 100vh;
+    }
+    .modal {
+        max-width: 686px;
+    }
     .menu-section nav ul li a {
         color:var(--yellow-color-1);
         font-size: 20px;
@@ -75,6 +87,11 @@
     .hospital-card:nth-child(3) {
         margin-left: 1.0rem;
     }
+    .hospital-list-download {
+        width:65%;
+        margin: 34px 102px 49px 103px;
+    }
+    
     .description-plan-box {
         max-width: 210px;
     }
@@ -106,9 +123,7 @@
     }
 }
 @media (min-width: 992px) {
-    html {
-        font-size: 90%;
-    }
+   
     header {
         background-color: var(--white);
         box-shadow: 0px 5px 6px #00000024;
@@ -140,9 +155,7 @@
     .golden-plan-p {
         display: block;
     }
-    .modal-container {
-        height: 100vh;
-    }
+  
    
    
 }

@@ -457,7 +457,7 @@ section.hero .container-lg {
     color: var(--white);
     padding: 0.7rem 1.9rem;
     box-shadow: 0px 3px 6px #00000029;
-    border-radius: 15px;
+    border-radius: 30px;
     font-weight: 900;
     margin: 3.0rem 1.0rem 1.4rem 1.0rem;
     width: 90%;
@@ -563,7 +563,7 @@ main .container-lg {
 .collapse-btn-box button, .collapse-btn-box .btn-box {
     border: none;
     box-shadow: 0px 3px 6px #00000029;
-    border-radius: 15px;
+    border-radius: 30px;
     width: 100%;
     font-size:1.2rem;
     text-transform: uppercase;
@@ -696,7 +696,7 @@ section .hospitals {
     font-size: 1.5rem;
     margin-top: 0.9rem;
     color: var(--yellow-color-5);
-    /* max-width: 19.0rem; */
+    max-width: 19.0rem;
     text-align: center;
 }
 .hospital-card i{
@@ -785,7 +785,7 @@ section .hospitals {
 .benefits-card button {
     background-color: var(--yellow-color-3);
     box-shadow: 0px 3px 6px #00000029;
-    border-radius: 16px;
+    border-radius: 30px;
     padding: 0.9rem 3.5rem;
     letter-spacing: 0.09rem;
     border: none;
@@ -867,7 +867,9 @@ section .hospitals {
 }
 
 /************ MAIS INFORMAÇÕES ************/
-
+.more-information {
+    margin-bottom:3.7rem;
+}
 .phone-call-box {
     display: flex;
     margin-bottom: 2.1rem;
@@ -894,7 +896,6 @@ section .hospitals {
 .form-box form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2.0rem;
 }
 .form-box form div {
     margin-bottom: 2.0rem;
@@ -1015,9 +1016,7 @@ footer p {
     color: var(--white);
     text-align: center;
 }
-footer p:last-child {
-    
-}
+
 .footer-p {
     padding: 0rem 2.6rem;
     max-width: 34.0rem;
